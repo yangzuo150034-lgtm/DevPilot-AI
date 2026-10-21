@@ -1,0 +1,14 @@
+# Linux dedicated Docker host only. See docs/DEPLOYMENT.md before enabling.
+services:
+  backend:
+    environment:
+      DEVPILOT_SANDBOX_ENABLED: 'true'
+  worker:
+    build: { context: ., dockerfile: backend/Dockerfile, target: sandbox-worker }
+    environment:
+      DEVPILOT_SANDBOX_ENABLED: 'true'
+      DEVPILOT_SANDBOX_STAGING_DIR: /sandbox
+      DEVPILOT_SANDBOX_HOST_DIR: ${DEVPILOT_SANDBOX_HOST_DIR:?Set an absolute staging directory on the Docker host}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${DEVPILOT_SANDBOX_HOST_DIR}:/sandbox

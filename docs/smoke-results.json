@@ -1,0 +1,392 @@
+{
+  "dataset": "bundled-calculator-smoke-v1",
+  "commit": "f3c52c0379bf78ef6a13b4ff16ed0080ed8901e65f74b8067665bb2f723de486",
+  "provider": "demo",
+  "embedding": "hash",
+  "retrieval": {
+    "keyword": {
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "queries": [
+        {
+          "query": "def add sum return",
+          "relevant_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "retrieved_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "division by zero ValueError",
+          "relevant_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c"
+          ],
+          "retrieved_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "a5a845947e68a13d66b9417dadb7ef1111400cf1ec08eaa748856dd13b398c9f",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "class CalculatorTests test_add",
+          "relevant_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "retrieved_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "test_divide assertRaises",
+          "relevant_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "retrieved_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "add sum calculator",
+          "relevant_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "retrieved_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "a5a845947e68a13d66b9417dadb7ef1111400cf1ec08eaa748856dd13b398c9f"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "divide return a / b",
+          "relevant_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c"
+          ],
+          "retrieved_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        }
+      ]
+    },
+    "vector": {
+      "recall_at_5": 1.0,
+      "mrr": 0.8888888888888888,
+      "queries": [
+        {
+          "query": "def add sum return",
+          "relevant_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "retrieved_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "division by zero ValueError",
+          "relevant_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c"
+          ],
+          "retrieved_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "a5a845947e68a13d66b9417dadb7ef1111400cf1ec08eaa748856dd13b398c9f",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "73fc604925327c50780435cbab98eddc56ca273c1094bac2a1dc28d6aad67766",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "class CalculatorTests test_add",
+          "relevant_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "retrieved_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "73fc604925327c50780435cbab98eddc56ca273c1094bac2a1dc28d6aad67766",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "test_divide assertRaises",
+          "relevant_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "retrieved_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "73fc604925327c50780435cbab98eddc56ca273c1094bac2a1dc28d6aad67766",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "add sum calculator",
+          "relevant_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "retrieved_chunk_ids": [
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "a5a845947e68a13d66b9417dadb7ef1111400cf1ec08eaa748856dd13b398c9f",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 0.3333333333333333
+        },
+        {
+          "query": "divide return a / b",
+          "relevant_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c"
+          ],
+          "retrieved_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        }
+      ]
+    },
+    "hybrid": {
+      "recall_at_5": 1.0,
+      "mrr": 1.0,
+      "queries": [
+        {
+          "query": "def add sum return",
+          "relevant_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "retrieved_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "division by zero ValueError",
+          "relevant_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c"
+          ],
+          "retrieved_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "a5a845947e68a13d66b9417dadb7ef1111400cf1ec08eaa748856dd13b398c9f",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "73fc604925327c50780435cbab98eddc56ca273c1094bac2a1dc28d6aad67766",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "class CalculatorTests test_add",
+          "relevant_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "retrieved_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "73fc604925327c50780435cbab98eddc56ca273c1094bac2a1dc28d6aad67766",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "test_divide assertRaises",
+          "relevant_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "retrieved_chunk_ids": [
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "73fc604925327c50780435cbab98eddc56ca273c1094bac2a1dc28d6aad67766",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "add sum calculator",
+          "relevant_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc"
+          ],
+          "retrieved_chunk_ids": [
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "a5a845947e68a13d66b9417dadb7ef1111400cf1ec08eaa748856dd13b398c9f",
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        },
+        {
+          "query": "divide return a / b",
+          "relevant_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c"
+          ],
+          "retrieved_chunk_ids": [
+            "0ca098f247b6cee1f2f6cfc7b5a43997911820151423b4ad19787440b353f37c",
+            "54b4da2db2fdbcd830d9f47c566e073c0993a1e208d44bc1529eb747de8f4acc",
+            "f320fc7260f2e3c7273467c86e91792f8fbf520fe8100c622daaa913bec3c0cc",
+            "7cabb814131ac76237fb674386fc19e3677c50ece7202423f33f2b982dcf66ec",
+            "045a417a7446ce0f6faab787f231a4eaddefb84f4142cee716bac7bb276a19fa"
+          ],
+          "recall_at_5": 1.0,
+          "rr": 1.0
+        }
+      ]
+    }
+  },
+  "agent_runs": [
+    {
+      "variant": "A",
+      "task_id": "84142a2cb3c94fefb8fc414e65f6313f",
+      "status": "approved_unverified",
+      "latency_seconds": 0.078,
+      "approval_requested": true,
+      "automated_approval": true,
+      "patch_test_pass": null,
+      "task_success": null,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "model_calls": 0,
+        "api_cost_usd": null
+      },
+      "test_result": {
+        "status": "not_run",
+        "reason": "Docker sandbox disabled; no host fallback",
+        "baseline": {
+          "status": "not_run",
+          "reason": "Docker sandbox disabled; no host fallback"
+        }
+      }
+    },
+    {
+      "variant": "B",
+      "task_id": "95bdf9f985e54fa49d5881576a8f4c24",
+      "status": "approved_unverified",
+      "latency_seconds": 0.079,
+      "approval_requested": true,
+      "automated_approval": true,
+      "patch_test_pass": null,
+      "task_success": null,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "model_calls": 0,
+        "api_cost_usd": null
+      },
+      "test_result": {
+        "status": "not_run",
+        "reason": "Docker sandbox disabled; no host fallback",
+        "baseline": {
+          "status": "not_run",
+          "reason": "Docker sandbox disabled; no host fallback"
+        }
+      }
+    },
+    {
+      "variant": "C",
+      "task_id": "d4bc14c36b0d40e681c617c9b1be91ed",
+      "status": "approved_unverified",
+      "latency_seconds": 0.125,
+      "approval_requested": true,
+      "automated_approval": true,
+      "patch_test_pass": null,
+      "task_success": null,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "model_calls": 0,
+        "api_cost_usd": null
+      },
+      "test_result": {
+        "status": "not_run",
+        "reason": "Docker sandbox disabled; no host fallback",
+        "baseline": {
+          "status": "not_run",
+          "reason": "Docker sandbox disabled; no host fallback"
+        }
+      }
+    },
+    {
+      "variant": "D",
+      "task_id": "f67249daf1534bf1b57e6a81b77dbc0c",
+      "status": "approved_unverified",
+      "latency_seconds": 0.093,
+      "approval_requested": true,
+      "automated_approval": true,
+      "patch_test_pass": null,
+      "task_success": null,
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "model_calls": 0,
+        "api_cost_usd": null
+      },
+      "test_result": {
+        "status": "not_run",
+        "reason": "Docker sandbox disabled; no host fallback",
+        "baseline": {
+          "status": "not_run",
+          "reason": "Docker sandbox disabled; no host fallback"
+        }
+      }
+    }
+  ],
+  "failure_recovery_rate": null,
+  "human_intervention_rate": null,
+  "limitations": [
+    "One synthetic self-owned bug, six retrieval queries: not a general benchmark.",
+    "Demo proposals are deterministic fixtures, not measurements of LLM quality.",
+    "Null means unmeasured; script approvals are not human interventions.",
+    "A-D share safety/approval gates; D additionally uses Deep Agents in real-model mode."
+  ]
+}

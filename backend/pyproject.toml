@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=75,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devpilot-backend"
+version = "0.2.0"
+description = "Harness-enhanced repository coding platform"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi==0.156.4",
+    "uvicorn==0.54.0",
+    "sqlalchemy==2.1.5",
+    "pydantic-settings==2.16.1",
+    "langchain==1.4.6",
+    "langchain-openai==1.7.2",
+    "langgraph==1.2.16",
+    "langgraph-checkpoint-sqlite==3.1.2",
+    "langgraph-checkpoint-postgres==3.2.0",
+    "deepagents==0.7.29",
+    "qdrant-client==1.19.1",
+    "tree-sitter==0.26.0",
+    "tree-sitter-python==0.25.0",
+    "tree-sitter-javascript==0.25.0",
+    "tree-sitter-typescript==0.23.2",
+    "redis==8.1.0",
+    "rq==2.12.0",
+    "psycopg[binary,pool]==3.3.6",
+    "mcp==2.3.0",
+    "httpx==0.28.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx2==2.15.1",
+    "pytest==9.1.1",
+    "ruff==0.17.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Embedded demo source text preserves exact line numbers and whitespace.
+"app/repositories.py" = ["E501"]
+
+[tool.setuptools.package-data]
+app = ["skills/*.md"]

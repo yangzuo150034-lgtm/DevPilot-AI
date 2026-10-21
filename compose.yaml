@@ -1,0 +1,63 @@
+name: devpilot-ai
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: devpilot
+      POSTGRES_PASSWORD: ${DEVPILOT_POSTGRES_PASSWORD:?Set a PostgreSQL password in .env}
+      POSTGRES_DB: devpilot
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U devpilot']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    command: [redis-server, --appendonly, 'yes']
+    volumes: [redis_data:/data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  qdrant:
+    image: qdrant/qdrant:v1.19.1
+    volumes: [qdrant_data:/qdrant/storage]
+  backend:
+    build: { context: ., dockerfile: backend/Dockerfile, target: runtime }
+    environment: &backend_environment
+      DEVPILOT_DATA_DIR: /data
+      DEVPILOT_DATABASE_URL: postgresql+psycopg://devpilot:${DEVPILOT_POSTGRES_PASSWORD}@postgres:5432/devpilot
+      DEVPILOT_CHECKPOINT_URL: postgresql://devpilot:${DEVPILOT_POSTGRES_PASSWORD}@postgres:5432/devpilot
+      DEVPILOT_REDIS_URL: redis://redis:6379/0
+      DEVPILOT_EXECUTION_BACKEND: rq
+      DEVPILOT_QDRANT_URL: http://qdrant:6333
+      DEVPILOT_API_TOKEN: ${DEVPILOT_API_TOKEN:?Set a workspace API token in .env}
+      DEVPILOT_OPENAI_API_KEY: ${DEVPILOT_OPENAI_API_KEY:-}
+      DEVPILOT_OPENAI_BASE_URL: ${DEVPILOT_OPENAI_BASE_URL:-https://api.openai.com/v1}
+      DEVPILOT_MODEL: ${DEVPILOT_MODEL:-gpt-4.1-mini}
+      DEVPILOT_EMBEDDING_PROVIDER: ${DEVPILOT_EMBEDDING_PROVIDER:-hash}
+      DEVPILOT_EMBEDDING_MODEL: ${DEVPILOT_EMBEDDING_MODEL:-text-embedding-3-small}
+      DEVPILOT_GITHUB_TOKEN: ${DEVPILOT_GITHUB_TOKEN:-}
+      DEVPILOT_SANDBOX_ENABLED: 'false'
+    volumes: [app_data:/data]
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+      qdrant: { condition: service_started }
+  worker:
+    build: { context: ., dockerfile: backend/Dockerfile, target: runtime }
+    command: [python, -m, app.worker]
+    environment: *backend_environment
+    volumes: [app_data:/data]
+    depends_on: [backend]
+  frontend:
+    build: { context: ., dockerfile: frontend/Dockerfile }
+    ports: ['127.0.0.1:8080:80']
+    depends_on: [backend]
+volumes:
+  postgres_data:
+  redis_data:
+  qdrant_data:
+  app_data:

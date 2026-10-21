@@ -20,9 +20,10 @@
 | Docker Sandbox 实际执行 | CI 通过：原版失败、候选补丁通过；本机无 Docker |
 | PostgreSQL Checkpoint / Redis RQ / 远程 Qdrant | CI 实际服务集成通过 |
 | Docker 镜像 / Compose HTTP 闭环 | CI 构建并启动 Compose，HTTP smoke 通过 |
-| Windows/Linux 单元与浏览器 CI | 首次代码提交的 5 个 Jobs 全部通过 |
+| Windows/Linux 单元与浏览器 CI | 最终代码修订的 5 个 Jobs 全部通过 |
 
-实际远程证据：[CI run 39535510457](https://github.com/yangzuo150034-lgtm/DevPilot-AI/actions/runs/39535510457)，代码 commit `db59de4e3e1f10c2b84a8fd145b9200962d21063`。该记录证明对应版本，不自动证明后续改动。最后费用展示/格式检查修订会另行运行 CI。
+最终代码验收：[CI run 39536218715](https://github.com/yangzuo150034-lgtm/DevPilot-AI/actions/runs/39536218715)，代码 commit `8c25093f379d0f8cb9c2f34212b1a5660a30bacb`，5 个 Jobs 全部成功。
+首次完整版本的 [CI run 39535510457](https://github.com/yangzuo150034-lgtm/DevPilot-AI/actions/runs/39535510457) 亦全部成功。此后仅更新本文档，不改变已验证代码。
 
 ## CI 判定规则
 

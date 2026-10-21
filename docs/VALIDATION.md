@@ -17,10 +17,12 @@
 | 真实付费模型调用 | 未运行：没有配置用户模型密钥 |
 | Deep Agents API 组合 | 本地脚本模型实际调用适配通过；不是模型质量评测 |
 | MCP 协议 | 本地真实 stdio 客户端初始化和工具列表通过 |
-| Docker Sandbox 实际执行 | 本机未运行；CI integration 配置独立实测 |
-| PostgreSQL Checkpoint / Redis RQ / 远程 Qdrant | 本机未运行；CI integration 配置独立实测 |
-| Docker 镜像 / Compose HTTP 闭环 | CI 配置构建与实际 smoke 检查，以对应 commit 日志为准 |
-| Windows/Linux 单元与浏览器 CI | 上传后以 GitHub Actions 的实际状态为准 |
+| Docker Sandbox 实际执行 | CI 通过：原版失败、候选补丁通过；本机无 Docker |
+| PostgreSQL Checkpoint / Redis RQ / 远程 Qdrant | CI 实际服务集成通过 |
+| Docker 镜像 / Compose HTTP 闭环 | CI 构建并启动 Compose，HTTP smoke 通过 |
+| Windows/Linux 单元与浏览器 CI | 首次代码提交的 5 个 Jobs 全部通过 |
+
+实际远程证据：[CI run 39535510457](https://github.com/yangzuo150034-lgtm/DevPilot-AI/actions/runs/39535510457)，代码 commit `db59de4e3e1f10c2b84a8fd145b9200962d21063`。该记录证明对应版本，不自动证明后续改动。最后费用展示/格式检查修订会另行运行 CI。
 
 ## CI 判定规则
 

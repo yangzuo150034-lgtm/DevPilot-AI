@@ -745,7 +745,11 @@ export default function App() {
                         <span>
                           费用{' '}
                           <b>
-                            {selected.provider === 'demo' ? '$0（演示）' : '未配置价格，不估算'}
+                            {selected.provider === 'demo'
+                              ? '$0（演示）'
+                              : selected.result.usage.api_cost_usd != null
+                                ? `$${selected.result.usage.api_cost_usd.toFixed(6)}（按配置估算）`
+                                : '未配置价格，不估算'}
                           </b>
                         </span>
                       </div>

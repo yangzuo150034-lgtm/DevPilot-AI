@@ -39,14 +39,15 @@
 
 已检查环境：Python 3.12.4、Git 2.45.2、Node.js 22.22.0、npm.cmd 10.9.4。Docker 未在本机找到，uv 不是必需项。首次安装需要联网；使用 Python 3.12.x 和 Node 22.12+（本项目实测 22.22.0）。
 
-以下均为 PowerShell 命令，每条成功后再运行下一条。本工作区已安装依赖，若你继续使用当前机器，可直接跳到启动服务。
+以下均为 PowerShell 命令，每条成功后再运行下一条。如果你已经安装依赖，可以直接跳到启动服务。
 
 ### 1. 首次安装
 
-进入项目根目录，预期提示符定位到此项目；其他电脑替换为实际检出路径：
+首次使用可以先克隆仓库，再进入项目根目录。若已有本地副本，直接进入该目录：
 
 ```powershell
-Set-Location 'C:\Users\86180\Desktop\DevPilot AI'
+git clone https://github.com/yangzuo150034-lgtm/DevPilot-AI.git
+Set-Location DevPilot-AI
 ```
 
 在根目录检查 Python，预期输出 3.12.x：
